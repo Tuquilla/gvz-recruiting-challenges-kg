@@ -1,69 +1,51 @@
-# GVZ Recruiting Challenges
+<img src="assets/img/gvz-logo.svg" alt="GVZ logo" width="400px">
 
-<img src="assets/img/GVZ_logo.svg" alt="GVZ logo" width="400px">
+# Programmierungsaufgaben für die Rekrutierung von Software-EntwicklerInnen
 
-<span style="font-size: 1.5em">[karriere.gvz.ch](https://karriere.gvz.ch/)</span>
+## [karriere.gvz.ch](https://karriere.gvz.ch/)
 
----
+Hallo
 
-Hallo!
+Du hast dich auf eine Stelle bei der [Gebäudeversicherung Kanton Zürich GVZ](https://www.gvz.ch/) im Bereich Softwareentwicklung beworben und bist hier gelandet?
 
-Dieses Repository beinhaltet Aufgaben, welche von BewerberInnen auf Stellen im Bereich Software-Entwicklung bei der Gebäudeversicherung Kanton Zürich GVZ im Rahmen des Bewerbungsverfahrens gelöst werden.
+Wunderbar, hier bist du genau richtig. Dieses Repository beinhaltet Aufgaben für Kandidatinnen und Kandidaten, die sich im Bewerbungsprozesses befinden.
 
----
+### Hilfsmittel
 
-## Warum die Recruiting Challenges
+Entwickle so, wie du es im Alltag tust. Insbesondere:
 
-Anhand der eingereichten Resultate hoffen wir, uns ein Bild über deine Arbeitsweise, Kenntnisse und Programmierstil machen zu können.
+- nutze ein Entwicklungs-Setup deiner Wahl, so dass du dich wohl fühlst
+- benutze das Internet, künstliche Intelligenz oder andere Quellen, die dich weiterbringen
 
----
+### Abgabe
 
-## Rahmenbedingungen / Hilfsmittel
+Zur Abgabe der Resultate schlagen wir vor, ein Repository bei deinem favorisierten Git-Provider (z.B. GitHub, GitLab, Bitbucket) zu erstellen.
 
-Programmiere so, wie du es im Alltag tust. Insbesondere:
+Bitte achte darauf, dass du vor der Abgabe alle Commits gepusht hast und das Repository öffentlich ist.
 
-- verwende eine IDE deiner Wahl, in der du dich wohl fühlst
-- benutze das Internet und andere Quellen, die dich weiterbringen - aber kopiere keine Komplettlösung
+### Bewertungskriterien
 
-Zur Abgabe der Resultate schlagen wir vor, ein Repository bei deinem favorisierten Git-Provider (GitHub, GitLab, Bitbucket oder andere) zu erstellen.
+Wir bewerten funktionale Korrektheit, Einfachheit, Lesbarkeit und (soweit möglich) dein Vorgehen.
 
-Bitte achte darauf, dass du am Ende alle Commits pushst und dass das Repository öffentlich ist. Schicke nach Abschluss der Aufgabe(n) einen Link zum Repository an deine Kontaktperson bei der GVZ.
+Die Resultate der Aufgabe besprechen wir während dem Zweitgespräch.
 
----
+Danke, dass du dir Zeit für die Bearbeitung der Aufgaben nimmst. Viel Erfolg!
 
 ## Aufgaben
 
-### Aufgabe 1 - Angular Single Page Application
+### Aufgabe 1 - Frontend-Entwicklung mit Angular
 
-Aufgabenstellung in [task-1_angular-spa/README.md](./task-1_angular-spa/README.md)
+Im Ordner `./task-1_frontend-angular` befinden sich der Quellcode für eine [Angular](https://angular.dev/) Applikation.
 
-**Konzepte, Technologien und Fähigkeiten**
+Implementiere folgende Veränderungen und Erweiterungen:
 
-- Frontend Entwicklung
-- Typscript / CSS / HTML / Angular
-- Angular Material
+1. Neue Komponente - Eingabe einer Postadresse
 
-**Erwartete Bearbeitungsdauer**
+- Erstelle eine Komponente im Ordner `src/app/demo`, mit der eine Postaddresse eingegeben werden kann.
+- Verwende die bestehenden Komponenten in `src/app/parts`: `card`, `number-input`, `select` und `text-input`.
+- Validiere Eingaben von Benutzern.
 
-60 bis 90 Minuten
+2. Erweiterung der Navigation
 
-### Aufgabe 2 - ASP.NET Core Web API
-
-Aufgabenstellung in [task-2_aspnet-core-webapi/README.md](./task-2_aspnet-core-webapi/README.md)
-
-**Konzepte, Technologien und Fähigkeiten**
-
-- Backend Entwicklung
-- RESTful API
-- C# / ASP.NET Core
-- Entity Framework Core
-
-**Erwartete Bearbeitungsdauer**
-
-45 bis 75 Minuten
-
----
-
-## Zum Schluss noch dies
-
-Danke, dass du dir Zeit für die Bearbeitung der GVZ Recruiting Challenges nimmst. Wir wünschen dir viel Erfolg!
+- Füge eine weitere Sektion mit Namen "Kombinierte Bauteile" zur Navigationsleiste auf der linken Seite hinzu.
+- Füge ein [Route](https://angular.dev/guide/routing/define-routes) hinzu, über welche die in Schritt 1 erstellte Komponente zur Eingabe einer Postadresse angezeigt wird. Zeige die Route in der Sektion "Kombinierte Bauteile" an.
