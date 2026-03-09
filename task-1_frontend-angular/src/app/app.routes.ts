@@ -4,6 +4,7 @@ import { CardDemo } from './demo/card-demo/card-demo';
 import { NumberInputDemo } from './demo/number-input-demo/number-input-demo';
 import { SelectDemo } from './demo/select-demo/select-demo';
 import { TextInputDemo } from './demo/text-input-demo/text-input-demo';
+import { AddressDemo } from './demo/address-demo/address-demo.component';
 
 export const routes: Routes = [
   {
@@ -26,5 +27,13 @@ export const routes: Routes = [
     component: NumberInputDemo,
     data: { title: 'Zahleingabe' },
   },
-  { path: '**', redirectTo: '/card' },
+  {
+    path: 'address',
+    component: AddressDemo,
+    data: {
+      title: 'Postadresse',
+      combinedParts: true
+    }
+  },
+  { path: '**', redirectTo: '/card' }
 ];

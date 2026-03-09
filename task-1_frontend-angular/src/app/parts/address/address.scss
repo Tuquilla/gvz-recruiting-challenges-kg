@@ -1,0 +1,31 @@
+.addresses {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px 48px;
+  margin: 16px 0 0 0;
+}
+
+.address {
+  &.full {
+    flex: 0 1 100%;
+  }
+
+  &.half {
+    flex: 0 1 calc((100% - 48px) / 2);
+  }
+
+  &.one-third {
+    flex: 0 1 calc((100% - 2 * 48px) / 3);
+  }
+
+  &.one-fourth {
+    flex: 0 1 calc((100% - 3 * 48px) / 4);
+  }
+}
+
+.label {
+  font-size: 16px;
+  line-height: 120%;
+  margin: 0 0 12px 0;
+}

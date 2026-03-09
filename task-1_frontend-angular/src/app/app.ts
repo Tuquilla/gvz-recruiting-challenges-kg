@@ -16,10 +16,17 @@ import { routes } from './app.routes';
 export class App implements OnInit {
   protected activeNavigationLink: string | null = null;
   protected navigationLinks: { path: string; title: string }[] = routes
-    .filter((route) => route.path !== '**')
+    .filter((route) => route.path !== '**' && route.data?.['combinedParts'] != true)
     .map((route) => ({
       path: route.path!,
       title: route.data?.['title'] as string,
+    }));
+
+  protected combinedPartsNavigationLinks: { path: string; title: string }[] = routes
+    .filter((route) => route.path !== '**' && route.data?.['combinedParts'] == true)
+    .map((route) => ({
+      path: route.path!,
+      title: "/" + route.path!
     }));
 
   private readonly matIconRegistry = inject(MatIconRegistry);

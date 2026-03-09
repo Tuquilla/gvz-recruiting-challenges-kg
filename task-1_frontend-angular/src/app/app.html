@@ -19,6 +19,20 @@
         </a>
       }
     </mat-nav-list>
+
+    <p class="navigation-category mdc-list-item__primary-text">Kombinierte Bauteile</p>
+    <mat-nav-list class="navigation-list">
+      @for (link of combinedPartsNavigationLinks; track link) {
+        <a
+          mat-list-item
+          class="navigation-link"
+          [routerLink]="link.path"
+          [activated]="activeNavigationLink === link.path"
+        >
+          {{ link.title }}
+        </a>
+      }
+    </mat-nav-list>
   </mat-drawer>
   <mat-drawer-content class="content">
     <router-outlet />

@@ -1,0 +1,72 @@
+<app-card appearance="outlined">
+  <div class="addresses">
+    <div class="address half">
+      <p class="label">Name</p>
+      <app-text-input
+        label="Name"
+        [control]="validateName"
+      >
+      </app-text-input>
+    </div>
+    <div class="address half">
+      <p class="label">Vorname</p>
+      <app-text-input
+        label="Vorname"
+        [control]="validatePrename"
+      >
+      </app-text-input>
+    </div>
+    <div class="address full">
+      <p class="label">Firmenzusatz (optional)</p>
+      <app-text-input
+        label="Firma (optional)"
+        [control]="validateCompany"
+        [maxLength]="100"
+        [multiline]="true"
+      >
+      </app-text-input>
+    </div>
+    <div class="address half">
+      <p class="label">Strasse</p>
+      <app-text-input
+        label="Strasse"
+        [control]="validateStreet"
+      >
+      </app-text-input>
+    </div>
+    <div class="address one-fourth">
+      <p class="label">Hausnummer</p>
+      <app-text-input
+        label="Hausnummer"
+        [control]="validateHousenumber"
+      >
+      </app-text-input>
+    </div>
+    <div class="address full">
+      <p class="label">Addresszusatz (optional)</p>
+      <app-text-input
+        label="Addresszusatz (optional)"
+        [control]="validateAddressAddition"
+        [maxLength]="100"
+        [multiline]="true"
+      >
+      </app-text-input>
+    </div>
+    <div class="address one-fourth">
+      <p class="label">Postleitzahl</p>
+      <app-number-input
+        [control]="validatePostcode"
+        label="Postleitzahl"
+      >
+      </app-number-input>
+    </div>
+    <div class="address half">
+      <p class="label">Ort</p>
+      <app-text-input
+        label="Ort"
+        [control]="validateLocality"
+      >
+      </app-text-input>
+    </div>
+  </div>
+</app-card>
