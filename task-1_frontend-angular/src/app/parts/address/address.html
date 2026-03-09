@@ -4,7 +4,7 @@
       <p class="label">Name</p>
       <app-text-input
         label="Name"
-        [control]="validateName"
+        [control]="nameFormControl"
       >
       </app-text-input>
     </div>
@@ -12,15 +12,15 @@
       <p class="label">Vorname</p>
       <app-text-input
         label="Vorname"
-        [control]="validatePrename"
+        [control]="prenameFormControl"
       >
       </app-text-input>
     </div>
     <div class="address full">
-      <p class="label">Firmenzusatz (optional)</p>
+      <p class="label">Firmenzusatz</p>
       <app-text-input
-        label="Firma (optional)"
-        [control]="validateCompany"
+        label="Firmenzusatz (optional)"
+        [control]="companyFormControl"
         [maxLength]="100"
         [multiline]="true"
       >
@@ -30,7 +30,7 @@
       <p class="label">Strasse</p>
       <app-text-input
         label="Strasse"
-        [control]="validateStreet"
+        [control]="streetFormControl"
       >
       </app-text-input>
     </div>
@@ -38,15 +38,15 @@
       <p class="label">Hausnummer</p>
       <app-text-input
         label="Hausnummer"
-        [control]="validateHousenumber"
+        [control]="housenumberFormControl"
       >
       </app-text-input>
     </div>
     <div class="address full">
-      <p class="label">Addresszusatz (optional)</p>
+      <p class="label">Adresszusatz</p>
       <app-text-input
         label="Addresszusatz (optional)"
-        [control]="validateAddressAddition"
+        [control]="addressAdditionFormControl"
         [maxLength]="100"
         [multiline]="true"
       >
@@ -55,7 +55,7 @@
     <div class="address one-fourth">
       <p class="label">Postleitzahl</p>
       <app-number-input
-        [control]="validatePostcode"
+        [control]="postcodeFormControl"
         label="Postleitzahl"
       >
       </app-number-input>
@@ -64,7 +64,7 @@
       <p class="label">Ort</p>
       <app-text-input
         label="Ort"
-        [control]="validateLocality"
+        [control]="localityFormControl"
       >
       </app-text-input>
     </div>

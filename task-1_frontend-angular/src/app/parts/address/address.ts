@@ -26,39 +26,39 @@ const multilineValidator= [
 
 export class AddressComponent {
 
-  protected validateName= new FormControl<string | null>(
+  protected nameFormControl= new FormControl<string | null>(
     '',
     standardValidator,
   );
-  protected validatePrename= new FormControl<string | null>(
+  protected prenameFormControl= new FormControl<string | null>(
     '',
     standardValidator,
   );
 
-  protected validateCompany = new FormControl<
+  protected companyFormControl = new FormControl<
     string | null
   >('', multilineValidator
   );
 
-  protected validateStreet= new FormControl<string | null>(
+  protected streetFormControl= new FormControl<string | null>(
     '',
     standardValidator,
   );
-  protected validateHousenumber= new FormControl<string | null>(
+  protected housenumberFormControl= new FormControl<string | null>(
     '',
     [Validators.required, Validators.maxLength(10)],
   );
 
-  protected validateAddressAddition = new FormControl<
+  protected addressAdditionFormControl = new FormControl<
     string | null
   >('', multilineValidator
   );
 
-  protected validatePostcode = new FormControl<number | null>(
+  protected postcodeFormControl = new FormControl<number | null>(
     null,
     [Validators.required, Validators.min(1000), Validators.max(9999)],
   );
-  protected validateLocality = new FormControl<string | null>(
+  protected localityFormControl = new FormControl<string | null>(
     '',
     standardValidator,
   );
