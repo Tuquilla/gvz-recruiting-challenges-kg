@@ -2,14 +2,19 @@ import { Component } from '@angular/core';
 import {Card} from '../card/card';
 import {NumberInput} from '../number-input/number-input';
 import {TextInput} from '../text-input/text-input';
-import {FormControl, Validators} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+
+const standardMaxLength = 50;
+const multiLineMaxLength = 100;
+const houseNumberMaxLength = 10
+const postcodeMin = 1000
+const postcodeMax = 9999
 
 const standardValidator = [
-  Validators.required, Validators.maxLength(50)
+  Validators.required, Validators.maxLength(standardMaxLength)
 ];
-
 const multilineValidator= [
-  Validators.maxLength(100)
+  Validators.maxLength(multiLineMaxLength)
 ]
 
 
@@ -35,31 +40,42 @@ export class AddressComponent {
     standardValidator,
   );
 
-  protected companyFormControl = new FormControl<
-    string | null
-  >('', multilineValidator
+  protected companyFormControl = new FormControl<string | null>(
+    '', multilineValidator
   );
 
   protected streetFormControl= new FormControl<string | null>(
-    '',
-    standardValidator,
+    '', standardValidator,
   );
-  protected housenumberFormControl= new FormControl<string | null>(
-    '',
-    [Validators.required, Validators.maxLength(10)],
+  protected houseNumberFormControl= new FormControl<string | null>(
+    '', [Validators.required, Validators.maxLength(houseNumberMaxLength)],
   );
 
-  protected addressAdditionFormControl = new FormControl<
-    string | null
-  >('', multilineValidator
+  protected addressAdditionFormControl = new FormControl<string | null>(
+    '', multilineValidator
   );
 
   protected postcodeFormControl = new FormControl<number | null>(
-    null,
-    [Validators.required, Validators.min(1000), Validators.max(9999)],
+    null, [Validators.required, Validators.min(1000), Validators.max(9999)],
   );
   protected localityFormControl = new FormControl<string | null>(
-    '',
-    standardValidator,
+    '', standardValidator,
   );
+
+  protected addressFormGroup= new FormGroup({
+    name: this.nameFormControl,
+    prename: this.prenameFormControl,
+    company: this.companyFormControl,
+    street: this.streetFormControl,
+    houseNumber: this.houseNumberFormControl,
+    addressAddition: this.addressAdditionFormControl,
+    postcode: this.postcodeFormControl,
+    locality: this.localityFormControl,
+  });
+
+  protected readonly standardMaxLength = standardMaxLength;
+  protected readonly multiLineMaxLength = multiLineMaxLength;
+  protected readonly houseNumberMaxLength = houseNumberMaxLength;
+  protected readonly postcodeMin = postcodeMin;
+  protected readonly postcodeMax = postcodeMax;
 }
