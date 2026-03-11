@@ -7,16 +7,15 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 const standardMaxLength = 50;
 const multiLineMaxLength = 100;
 const houseNumberMaxLength = 10
-const postcodeMin = 1000
-const postcodeMax = 9999
+const postcodeMin = 1000;
+const postcodeMax = 9999;
 
 const standardValidator = [
   Validators.required, Validators.maxLength(standardMaxLength)
 ];
 const multilineValidator= [
   Validators.maxLength(multiLineMaxLength)
-]
-
+];
 
 @Component({
   selector: 'app-address',
@@ -30,11 +29,11 @@ const multilineValidator= [
 })
 
 export class AddressComponent {
-
   protected nameFormControl= new FormControl<string | null>(
     '',
     standardValidator,
   );
+
   protected prenameFormControl= new FormControl<string | null>(
     '',
     standardValidator,
@@ -47,6 +46,7 @@ export class AddressComponent {
   protected streetFormControl= new FormControl<string | null>(
     '', standardValidator,
   );
+
   protected houseNumberFormControl= new FormControl<string | null>(
     '', [Validators.required, Validators.maxLength(houseNumberMaxLength)],
   );
