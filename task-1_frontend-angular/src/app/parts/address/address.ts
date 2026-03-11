@@ -33,28 +33,22 @@ export class AddressComponent {
     '',
     standardValidator,
   );
-
   protected prenameFormControl= new FormControl<string | null>(
     '',
     standardValidator,
   );
-
   protected companyFormControl = new FormControl<string | null>(
     '', multilineValidator
   );
-
   protected streetFormControl= new FormControl<string | null>(
     '', standardValidator,
   );
-
   protected houseNumberFormControl= new FormControl<string | null>(
     '', [Validators.required, Validators.maxLength(houseNumberMaxLength)],
   );
-
   protected addressAdditionFormControl = new FormControl<string | null>(
     '', multilineValidator
   );
-
   protected postcodeFormControl = new FormControl<number | null>(
     null, [Validators.required, Validators.min(1000), Validators.max(9999)],
   );
