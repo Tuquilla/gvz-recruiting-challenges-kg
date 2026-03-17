@@ -22,6 +22,10 @@
   &.one-fourth {
     flex: 0 1 calc((100% - 3 * 48px) / 4);
   }
+
+  &.three-fourth {
+    flex: 0 1 calc(3 * ((100% - 3 * 48px) / 4) + 2 * 48px)
+  }
 }
 
 .label {

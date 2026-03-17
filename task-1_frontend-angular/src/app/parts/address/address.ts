@@ -11,10 +11,13 @@ const postcodeMin = 1000;
 const postcodeMax = 9999;
 
 const standardValidator = [
-  Validators.required, Validators.maxLength(standardMaxLength)
+  Validators.required,
+  Validators.maxLength(standardMaxLength),
+  Validators.pattern(/^[\p{L} \-,./]*$/u)
 ];
 const multilineValidator= [
-  Validators.maxLength(multiLineMaxLength)
+  Validators.maxLength(multiLineMaxLength),
+  Validators.pattern(/^[\p{L}\d \-,._/&!]*$/u)
 ];
 
 @Component({
@@ -44,7 +47,7 @@ export class AddressComponent {
     '', standardValidator,
   );
   protected houseNumberFormControl= new FormControl<string | null>(
-    '', [Validators.required, Validators.maxLength(houseNumberMaxLength)],
+    '', [Validators.maxLength(houseNumberMaxLength), Validators.pattern(/^[\p{L}\d \-/]*$/u)],
   );
   protected addressAdditionFormControl = new FormControl<string | null>(
     '', multilineValidator

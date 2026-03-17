@@ -28,7 +28,7 @@
       >
       </app-text-input>
     </div>
-    <div class="address half">
+    <div class="address three-fourth">
       <p class="label">Strasse</p>
       <app-text-input
         label="Strasse"
@@ -40,7 +40,7 @@
     <div class="address one-fourth">
       <p class="label">Hausnummer</p>
       <app-text-input
-        label="Hausnummer"
+        label="Hausnummer (optional)"
         [control]="addressFormGroup.controls.houseNumber"
         [maxLength]="houseNumberMaxLength"
       >
@@ -66,7 +66,7 @@
       >
       </app-number-input>
     </div>
-    <div class="address half">
+    <div class="address three-fourth">
       <p class="label">Ort</p>
       <app-text-input
         label="Ort"
